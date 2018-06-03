@@ -1,0 +1,709 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DBFD2A420C3CD7C001B7F23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD2A320C3CD7C001B7F23 /* AppDelegate.m */; };
+		2DBFD2A720C3CD7C001B7F23 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD2A620C3CD7C001B7F23 /* ViewController.m */; };
+		2DBFD2AA20C3CD7C001B7F23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DBFD2A820C3CD7C001B7F23 /* Main.storyboard */; };
+		2DBFD2AC20C3CD7C001B7F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBFD2AB20C3CD7C001B7F23 /* Assets.xcassets */; };
+		2DBFD2AF20C3CD7C001B7F23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DBFD2AD20C3CD7C001B7F23 /* LaunchScreen.storyboard */; };
+		2DBFD2B220C3CD7C001B7F23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD2B120C3CD7C001B7F23 /* main.m */; };
+		2DBFD2BC20C3CD7D001B7F23 /* PTBPerformanceCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD2BB20C3CD7D001B7F23 /* PTBPerformanceCenterTests.m */; };
+		2DBFD2C720C3CD7D001B7F23 /* PTBPerformanceCenterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD2C620C3CD7D001B7F23 /* PTBPerformanceCenterUITests.m */; };
+		2DBFD31220C3CDEC001B7F23 /* UINavigationController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD2E720C3CDEC001B7F23 /* UINavigationController+MemoryLeak.m */; };
+		2DBFD31320C3CDEC001B7F23 /* MLeakedObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD2EB20C3CDEC001B7F23 /* MLeakedObjectProxy.m */; };
+		2DBFD31420C3CDEC001B7F23 /* UIView+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD2ED20C3CDEC001B7F23 /* UIView+MemoryLeak.m */; };
+		2DBFD31520C3CDEC001B7F23 /* UITouch+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD2F020C3CDEC001B7F23 /* UITouch+MemoryLeak.m */; };
+		2DBFD31620C3CDEC001B7F23 /* UISplitViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD2F120C3CDEC001B7F23 /* UISplitViewController+MemoryLeak.m */; };
+		2DBFD31720C3CDEC001B7F23 /* UIPageViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD2F320C3CDEC001B7F23 /* UIPageViewController+MemoryLeak.m */; };
+		2DBFD31820C3CDEC001B7F23 /* UITabBarController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD2F520C3CDEC001B7F23 /* UITabBarController+MemoryLeak.m */; };
+		2DBFD31920C3CDEC001B7F23 /* MLeaksMessenger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD2F620C3CDEC001B7F23 /* MLeaksMessenger.m */; };
+		2DBFD31A20C3CDEC001B7F23 /* UIViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD2F820C3CDEC001B7F23 /* UIViewController+MemoryLeak.m */; };
+		2DBFD31B20C3CDEC001B7F23 /* UIApplication+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD2FB20C3CDEC001B7F23 /* UIApplication+MemoryLeak.m */; };
+		2DBFD31C20C3CDEC001B7F23 /* NSObject+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD30920C3CDEC001B7F23 /* NSObject+MemoryLeak.m */; };
+		2DBFD32020C3CE4B001B7F23 /* PTBPerformanceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD31F20C3CE4B001B7F23 /* PTBPerformanceCenter.m */; };
+		2DBFD32620C3CEB9001B7F23 /* PTBPerformanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD32520C3CEB9001B7F23 /* PTBPerformanceViewController.m */; };
+		2DBFD32920C3CEFC001B7F23 /* PTBPerformanceWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD32820C3CEFC001B7F23 /* PTBPerformanceWindow.m */; };
+		2DBFD32C20C3CF56001B7F23 /* PTBBasePerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD32B20C3CF56001B7F23 /* PTBBasePerformanceMonitor.m */; };
+		2DBFD32F20C3CF8C001B7F23 /* PTBMemoryMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD32E20C3CF8C001B7F23 /* PTBMemoryMonitor.m */; };
+		2DBFD33220C3CFC8001B7F23 /* PTBCPUMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD33120C3CFC8001B7F23 /* PTBCPUMonitor.m */; };
+		2DBFD33520C3CFF5001B7F23 /* PTBFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFD33420C3CFF5001B7F23 /* PTBFPSMonitor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DBFD2B820C3CD7D001B7F23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DBFD29720C3CD7C001B7F23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DBFD29E20C3CD7C001B7F23;
+			remoteInfo = PTBPerformanceCenter;
+		};
+		2DBFD2C320C3CD7D001B7F23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DBFD29720C3CD7C001B7F23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DBFD29E20C3CD7C001B7F23;
+			remoteInfo = PTBPerformanceCenter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2DBFD29F20C3CD7C001B7F23 /* PTBPerformanceCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTBPerformanceCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DBFD2A220C3CD7C001B7F23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2DBFD2A320C3CD7C001B7F23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2DBFD2A520C3CD7C001B7F23 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2DBFD2A620C3CD7C001B7F23 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2DBFD2A920C3CD7C001B7F23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2DBFD2AB20C3CD7C001B7F23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DBFD2AE20C3CD7C001B7F23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2DBFD2B020C3CD7C001B7F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DBFD2B120C3CD7C001B7F23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2DBFD2B720C3CD7D001B7F23 /* PTBPerformanceCenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PTBPerformanceCenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DBFD2BB20C3CD7D001B7F23 /* PTBPerformanceCenterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTBPerformanceCenterTests.m; sourceTree = "<group>"; };
+		2DBFD2BD20C3CD7D001B7F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DBFD2C220C3CD7D001B7F23 /* PTBPerformanceCenterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PTBPerformanceCenterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DBFD2C620C3CD7D001B7F23 /* PTBPerformanceCenterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTBPerformanceCenterUITests.m; sourceTree = "<group>"; };
+		2DBFD2C820C3CD7D001B7F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DBFD2E720C3CDEC001B7F23 /* UINavigationController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+MemoryLeak.m"; sourceTree = "<group>"; };
+		2DBFD2E820C3CDEC001B7F23 /* MLeaksMessenger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLeaksMessenger.h; sourceTree = "<group>"; };
+		2DBFD2E920C3CDEC001B7F23 /* UITabBarController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+MemoryLeak.h"; sourceTree = "<group>"; };
+		2DBFD2EA20C3CDEC001B7F23 /* UIPageViewController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPageViewController+MemoryLeak.h"; sourceTree = "<group>"; };
+		2DBFD2EB20C3CDEC001B7F23 /* MLeakedObjectProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLeakedObjectProxy.m; sourceTree = "<group>"; };
+		2DBFD2EC20C3CDEC001B7F23 /* UIViewController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MemoryLeak.h"; sourceTree = "<group>"; };
+		2DBFD2ED20C3CDEC001B7F23 /* UIView+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MemoryLeak.m"; sourceTree = "<group>"; };
+		2DBFD2EE20C3CDEC001B7F23 /* NSObject+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MemoryLeak.h"; sourceTree = "<group>"; };
+		2DBFD2EF20C3CDEC001B7F23 /* UIApplication+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+MemoryLeak.h"; sourceTree = "<group>"; };
+		2DBFD2F020C3CDEC001B7F23 /* UITouch+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITouch+MemoryLeak.m"; sourceTree = "<group>"; };
+		2DBFD2F120C3CDEC001B7F23 /* UISplitViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISplitViewController+MemoryLeak.m"; sourceTree = "<group>"; };
+		2DBFD2F220C3CDEC001B7F23 /* MLeaksFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLeaksFinder.h; sourceTree = "<group>"; };
+		2DBFD2F320C3CDEC001B7F23 /* UIPageViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPageViewController+MemoryLeak.m"; sourceTree = "<group>"; };
+		2DBFD2F420C3CDEC001B7F23 /* MLeakedObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLeakedObjectProxy.h; sourceTree = "<group>"; };
+		2DBFD2F520C3CDEC001B7F23 /* UITabBarController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+MemoryLeak.m"; sourceTree = "<group>"; };
+		2DBFD2F620C3CDEC001B7F23 /* MLeaksMessenger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLeaksMessenger.m; sourceTree = "<group>"; };
+		2DBFD2F720C3CDEC001B7F23 /* UINavigationController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+MemoryLeak.h"; sourceTree = "<group>"; };
+		2DBFD2F820C3CDEC001B7F23 /* UIViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MemoryLeak.m"; sourceTree = "<group>"; };
+		2DBFD2F920C3CDEC001B7F23 /* UISplitViewController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISplitViewController+MemoryLeak.h"; sourceTree = "<group>"; };
+		2DBFD2FA20C3CDEC001B7F23 /* UITouch+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITouch+MemoryLeak.h"; sourceTree = "<group>"; };
+		2DBFD2FB20C3CDEC001B7F23 /* UIApplication+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+MemoryLeak.m"; sourceTree = "<group>"; };
+		2DBFD30920C3CDEC001B7F23 /* NSObject+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MemoryLeak.m"; sourceTree = "<group>"; };
+		2DBFD30A20C3CDEC001B7F23 /* UIView+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MemoryLeak.h"; sourceTree = "<group>"; };
+		2DBFD31E20C3CE4B001B7F23 /* PTBPerformanceCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTBPerformanceCenter.h; sourceTree = "<group>"; };
+		2DBFD31F20C3CE4B001B7F23 /* PTBPerformanceCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTBPerformanceCenter.m; sourceTree = "<group>"; };
+		2DBFD32420C3CEB9001B7F23 /* PTBPerformanceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTBPerformanceViewController.h; sourceTree = "<group>"; };
+		2DBFD32520C3CEB9001B7F23 /* PTBPerformanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTBPerformanceViewController.m; sourceTree = "<group>"; };
+		2DBFD32720C3CEFC001B7F23 /* PTBPerformanceWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTBPerformanceWindow.h; sourceTree = "<group>"; };
+		2DBFD32820C3CEFC001B7F23 /* PTBPerformanceWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTBPerformanceWindow.m; sourceTree = "<group>"; };
+		2DBFD32A20C3CF56001B7F23 /* PTBBasePerformanceMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTBBasePerformanceMonitor.h; sourceTree = "<group>"; };
+		2DBFD32B20C3CF56001B7F23 /* PTBBasePerformanceMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTBBasePerformanceMonitor.m; sourceTree = "<group>"; };
+		2DBFD32D20C3CF8C001B7F23 /* PTBMemoryMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTBMemoryMonitor.h; sourceTree = "<group>"; };
+		2DBFD32E20C3CF8C001B7F23 /* PTBMemoryMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTBMemoryMonitor.m; sourceTree = "<group>"; };
+		2DBFD33020C3CFC8001B7F23 /* PTBCPUMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTBCPUMonitor.h; sourceTree = "<group>"; };
+		2DBFD33120C3CFC8001B7F23 /* PTBCPUMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTBCPUMonitor.m; sourceTree = "<group>"; };
+		2DBFD33320C3CFF5001B7F23 /* PTBFPSMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTBFPSMonitor.h; sourceTree = "<group>"; };
+		2DBFD33420C3CFF5001B7F23 /* PTBFPSMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTBFPSMonitor.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DBFD29C20C3CD7C001B7F23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBFD2B420C3CD7D001B7F23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBFD2BF20C3CD7D001B7F23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DBFD29620C3CD7C001B7F23 = {
+			isa = PBXGroup;
+			children = (
+				2DBFD2A120C3CD7C001B7F23 /* PTBPerformanceCenter */,
+				2DBFD2BA20C3CD7D001B7F23 /* PTBPerformanceCenterTests */,
+				2DBFD2C520C3CD7D001B7F23 /* PTBPerformanceCenterUITests */,
+				2DBFD2A020C3CD7C001B7F23 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2DBFD2A020C3CD7C001B7F23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DBFD29F20C3CD7C001B7F23 /* PTBPerformanceCenter.app */,
+				2DBFD2B720C3CD7D001B7F23 /* PTBPerformanceCenterTests.xctest */,
+				2DBFD2C220C3CD7D001B7F23 /* PTBPerformanceCenterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DBFD2A120C3CD7C001B7F23 /* PTBPerformanceCenter */ = {
+			isa = PBXGroup;
+			children = (
+				2DBFD2D420C3CDEC001B7F23 /* PTBPerformanceCenter */,
+				2DBFD2A220C3CD7C001B7F23 /* AppDelegate.h */,
+				2DBFD2A320C3CD7C001B7F23 /* AppDelegate.m */,
+				2DBFD2A520C3CD7C001B7F23 /* ViewController.h */,
+				2DBFD2A620C3CD7C001B7F23 /* ViewController.m */,
+				2DBFD2A820C3CD7C001B7F23 /* Main.storyboard */,
+				2DBFD2AB20C3CD7C001B7F23 /* Assets.xcassets */,
+				2DBFD2AD20C3CD7C001B7F23 /* LaunchScreen.storyboard */,
+				2DBFD2B020C3CD7C001B7F23 /* Info.plist */,
+				2DBFD2B120C3CD7C001B7F23 /* main.m */,
+			);
+			path = PTBPerformanceCenter;
+			sourceTree = "<group>";
+		};
+		2DBFD2BA20C3CD7D001B7F23 /* PTBPerformanceCenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DBFD2BB20C3CD7D001B7F23 /* PTBPerformanceCenterTests.m */,
+				2DBFD2BD20C3CD7D001B7F23 /* Info.plist */,
+			);
+			path = PTBPerformanceCenterTests;
+			sourceTree = "<group>";
+		};
+		2DBFD2C520C3CD7D001B7F23 /* PTBPerformanceCenterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2DBFD2C620C3CD7D001B7F23 /* PTBPerformanceCenterUITests.m */,
+				2DBFD2C820C3CD7D001B7F23 /* Info.plist */,
+			);
+			path = PTBPerformanceCenterUITests;
+			sourceTree = "<group>";
+		};
+		2DBFD2D420C3CDEC001B7F23 /* PTBPerformanceCenter */ = {
+			isa = PBXGroup;
+			children = (
+				2DBFD2D620C3CDEC001B7F23 /* Monitor */,
+				2DBFD2E620C3CDEC001B7F23 /* LeakFinder */,
+				2DBFD31E20C3CE4B001B7F23 /* PTBPerformanceCenter.h */,
+				2DBFD31F20C3CE4B001B7F23 /* PTBPerformanceCenter.m */,
+				2DBFD32420C3CEB9001B7F23 /* PTBPerformanceViewController.h */,
+				2DBFD32520C3CEB9001B7F23 /* PTBPerformanceViewController.m */,
+				2DBFD32720C3CEFC001B7F23 /* PTBPerformanceWindow.h */,
+				2DBFD32820C3CEFC001B7F23 /* PTBPerformanceWindow.m */,
+			);
+			path = PTBPerformanceCenter;
+			sourceTree = "<group>";
+		};
+		2DBFD2D620C3CDEC001B7F23 /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				2DBFD2D720C3CDEC001B7F23 /* Memory */,
+				2DBFD2DA20C3CDEC001B7F23 /* CPU */,
+				2DBFD2DE20C3CDEC001B7F23 /* FPS */,
+				2DBFD32A20C3CF56001B7F23 /* PTBBasePerformanceMonitor.h */,
+				2DBFD32B20C3CF56001B7F23 /* PTBBasePerformanceMonitor.m */,
+			);
+			path = Monitor;
+			sourceTree = "<group>";
+		};
+		2DBFD2D720C3CDEC001B7F23 /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				2DBFD32D20C3CF8C001B7F23 /* PTBMemoryMonitor.h */,
+				2DBFD32E20C3CF8C001B7F23 /* PTBMemoryMonitor.m */,
+			);
+			path = Memory;
+			sourceTree = "<group>";
+		};
+		2DBFD2DA20C3CDEC001B7F23 /* CPU */ = {
+			isa = PBXGroup;
+			children = (
+				2DBFD33020C3CFC8001B7F23 /* PTBCPUMonitor.h */,
+				2DBFD33120C3CFC8001B7F23 /* PTBCPUMonitor.m */,
+			);
+			path = CPU;
+			sourceTree = "<group>";
+		};
+		2DBFD2DE20C3CDEC001B7F23 /* FPS */ = {
+			isa = PBXGroup;
+			children = (
+				2DBFD33320C3CFF5001B7F23 /* PTBFPSMonitor.h */,
+				2DBFD33420C3CFF5001B7F23 /* PTBFPSMonitor.m */,
+			);
+			path = FPS;
+			sourceTree = "<group>";
+		};
+		2DBFD2E620C3CDEC001B7F23 /* LeakFinder */ = {
+			isa = PBXGroup;
+			children = (
+				2DBFD2F220C3CDEC001B7F23 /* MLeaksFinder.h */,
+				2DBFD2F420C3CDEC001B7F23 /* MLeakedObjectProxy.h */,
+				2DBFD2EB20C3CDEC001B7F23 /* MLeakedObjectProxy.m */,
+				2DBFD2E820C3CDEC001B7F23 /* MLeaksMessenger.h */,
+				2DBFD2F620C3CDEC001B7F23 /* MLeaksMessenger.m */,
+				2DBFD2EE20C3CDEC001B7F23 /* NSObject+MemoryLeak.h */,
+				2DBFD30920C3CDEC001B7F23 /* NSObject+MemoryLeak.m */,
+				2DBFD30A20C3CDEC001B7F23 /* UIView+MemoryLeak.h */,
+				2DBFD2ED20C3CDEC001B7F23 /* UIView+MemoryLeak.m */,
+				2DBFD2FA20C3CDEC001B7F23 /* UITouch+MemoryLeak.h */,
+				2DBFD2F020C3CDEC001B7F23 /* UITouch+MemoryLeak.m */,
+				2DBFD2EC20C3CDEC001B7F23 /* UIViewController+MemoryLeak.h */,
+				2DBFD2F820C3CDEC001B7F23 /* UIViewController+MemoryLeak.m */,
+				2DBFD2F720C3CDEC001B7F23 /* UINavigationController+MemoryLeak.h */,
+				2DBFD2E720C3CDEC001B7F23 /* UINavigationController+MemoryLeak.m */,
+				2DBFD2E920C3CDEC001B7F23 /* UITabBarController+MemoryLeak.h */,
+				2DBFD2F520C3CDEC001B7F23 /* UITabBarController+MemoryLeak.m */,
+				2DBFD2EA20C3CDEC001B7F23 /* UIPageViewController+MemoryLeak.h */,
+				2DBFD2F320C3CDEC001B7F23 /* UIPageViewController+MemoryLeak.m */,
+				2DBFD2EF20C3CDEC001B7F23 /* UIApplication+MemoryLeak.h */,
+				2DBFD2FB20C3CDEC001B7F23 /* UIApplication+MemoryLeak.m */,
+				2DBFD2F920C3CDEC001B7F23 /* UISplitViewController+MemoryLeak.h */,
+				2DBFD2F120C3CDEC001B7F23 /* UISplitViewController+MemoryLeak.m */,
+			);
+			path = LeakFinder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DBFD29E20C3CD7C001B7F23 /* PTBPerformanceCenter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DBFD2CB20C3CD7D001B7F23 /* Build configuration list for PBXNativeTarget "PTBPerformanceCenter" */;
+			buildPhases = (
+				2DBFD29B20C3CD7C001B7F23 /* Sources */,
+				2DBFD29C20C3CD7C001B7F23 /* Frameworks */,
+				2DBFD29D20C3CD7C001B7F23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PTBPerformanceCenter;
+			productName = PTBPerformanceCenter;
+			productReference = 2DBFD29F20C3CD7C001B7F23 /* PTBPerformanceCenter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2DBFD2B620C3CD7D001B7F23 /* PTBPerformanceCenterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DBFD2CE20C3CD7D001B7F23 /* Build configuration list for PBXNativeTarget "PTBPerformanceCenterTests" */;
+			buildPhases = (
+				2DBFD2B320C3CD7D001B7F23 /* Sources */,
+				2DBFD2B420C3CD7D001B7F23 /* Frameworks */,
+				2DBFD2B520C3CD7D001B7F23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DBFD2B920C3CD7D001B7F23 /* PBXTargetDependency */,
+			);
+			name = PTBPerformanceCenterTests;
+			productName = PTBPerformanceCenterTests;
+			productReference = 2DBFD2B720C3CD7D001B7F23 /* PTBPerformanceCenterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2DBFD2C120C3CD7D001B7F23 /* PTBPerformanceCenterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DBFD2D120C3CD7D001B7F23 /* Build configuration list for PBXNativeTarget "PTBPerformanceCenterUITests" */;
+			buildPhases = (
+				2DBFD2BE20C3CD7D001B7F23 /* Sources */,
+				2DBFD2BF20C3CD7D001B7F23 /* Frameworks */,
+				2DBFD2C020C3CD7D001B7F23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DBFD2C420C3CD7D001B7F23 /* PBXTargetDependency */,
+			);
+			name = PTBPerformanceCenterUITests;
+			productName = PTBPerformanceCenterUITests;
+			productReference = 2DBFD2C220C3CD7D001B7F23 /* PTBPerformanceCenterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DBFD29720C3CD7C001B7F23 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = PerTerbin;
+				TargetAttributes = {
+					2DBFD29E20C3CD7C001B7F23 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					2DBFD2B620C3CD7D001B7F23 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2DBFD29E20C3CD7C001B7F23;
+					};
+					2DBFD2C120C3CD7D001B7F23 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2DBFD29E20C3CD7C001B7F23;
+					};
+				};
+			};
+			buildConfigurationList = 2DBFD29A20C3CD7C001B7F23 /* Build configuration list for PBXProject "PTBPerformanceCenter" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DBFD29620C3CD7C001B7F23;
+			productRefGroup = 2DBFD2A020C3CD7C001B7F23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DBFD29E20C3CD7C001B7F23 /* PTBPerformanceCenter */,
+				2DBFD2B620C3CD7D001B7F23 /* PTBPerformanceCenterTests */,
+				2DBFD2C120C3CD7D001B7F23 /* PTBPerformanceCenterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DBFD29D20C3CD7C001B7F23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DBFD2AF20C3CD7C001B7F23 /* LaunchScreen.storyboard in Resources */,
+				2DBFD2AC20C3CD7C001B7F23 /* Assets.xcassets in Resources */,
+				2DBFD2AA20C3CD7C001B7F23 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBFD2B520C3CD7D001B7F23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBFD2C020C3CD7D001B7F23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DBFD29B20C3CD7C001B7F23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DBFD32020C3CE4B001B7F23 /* PTBPerformanceCenter.m in Sources */,
+				2DBFD32920C3CEFC001B7F23 /* PTBPerformanceWindow.m in Sources */,
+				2DBFD31420C3CDEC001B7F23 /* UIView+MemoryLeak.m in Sources */,
+				2DBFD32C20C3CF56001B7F23 /* PTBBasePerformanceMonitor.m in Sources */,
+				2DBFD32620C3CEB9001B7F23 /* PTBPerformanceViewController.m in Sources */,
+				2DBFD31920C3CDEC001B7F23 /* MLeaksMessenger.m in Sources */,
+				2DBFD32F20C3CF8C001B7F23 /* PTBMemoryMonitor.m in Sources */,
+				2DBFD31220C3CDEC001B7F23 /* UINavigationController+MemoryLeak.m in Sources */,
+				2DBFD33220C3CFC8001B7F23 /* PTBCPUMonitor.m in Sources */,
+				2DBFD2A720C3CD7C001B7F23 /* ViewController.m in Sources */,
+				2DBFD31320C3CDEC001B7F23 /* MLeakedObjectProxy.m in Sources */,
+				2DBFD31B20C3CDEC001B7F23 /* UIApplication+MemoryLeak.m in Sources */,
+				2DBFD31620C3CDEC001B7F23 /* UISplitViewController+MemoryLeak.m in Sources */,
+				2DBFD31820C3CDEC001B7F23 /* UITabBarController+MemoryLeak.m in Sources */,
+				2DBFD33520C3CFF5001B7F23 /* PTBFPSMonitor.m in Sources */,
+				2DBFD31520C3CDEC001B7F23 /* UITouch+MemoryLeak.m in Sources */,
+				2DBFD31C20C3CDEC001B7F23 /* NSObject+MemoryLeak.m in Sources */,
+				2DBFD2B220C3CD7C001B7F23 /* main.m in Sources */,
+				2DBFD31A20C3CDEC001B7F23 /* UIViewController+MemoryLeak.m in Sources */,
+				2DBFD2A420C3CD7C001B7F23 /* AppDelegate.m in Sources */,
+				2DBFD31720C3CDEC001B7F23 /* UIPageViewController+MemoryLeak.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBFD2B320C3CD7D001B7F23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DBFD2BC20C3CD7D001B7F23 /* PTBPerformanceCenterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBFD2BE20C3CD7D001B7F23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DBFD2C720C3CD7D001B7F23 /* PTBPerformanceCenterUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DBFD2B920C3CD7D001B7F23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DBFD29E20C3CD7C001B7F23 /* PTBPerformanceCenter */;
+			targetProxy = 2DBFD2B820C3CD7D001B7F23 /* PBXContainerItemProxy */;
+		};
+		2DBFD2C420C3CD7D001B7F23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DBFD29E20C3CD7C001B7F23 /* PTBPerformanceCenter */;
+			targetProxy = 2DBFD2C320C3CD7D001B7F23 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2DBFD2A820C3CD7C001B7F23 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DBFD2A920C3CD7C001B7F23 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2DBFD2AD20C3CD7C001B7F23 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DBFD2AE20C3CD7C001B7F23 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2DBFD2C920C3CD7D001B7F23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2DBFD2CA20C3CD7D001B7F23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DBFD2CC20C3CD7D001B7F23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PTBPerformanceCenter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PerTerbin.PTBPerformanceCenter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2DBFD2CD20C3CD7D001B7F23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PTBPerformanceCenter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PerTerbin.PTBPerformanceCenter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2DBFD2CF20C3CD7D001B7F23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PTBPerformanceCenterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PerTerbin.PTBPerformanceCenterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PTBPerformanceCenter.app/PTBPerformanceCenter";
+			};
+			name = Debug;
+		};
+		2DBFD2D020C3CD7D001B7F23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PTBPerformanceCenterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PerTerbin.PTBPerformanceCenterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PTBPerformanceCenter.app/PTBPerformanceCenter";
+			};
+			name = Release;
+		};
+		2DBFD2D220C3CD7D001B7F23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PTBPerformanceCenterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PerTerbin.PTBPerformanceCenterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PTBPerformanceCenter;
+			};
+			name = Debug;
+		};
+		2DBFD2D320C3CD7D001B7F23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PTBPerformanceCenterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PerTerbin.PTBPerformanceCenterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PTBPerformanceCenter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DBFD29A20C3CD7C001B7F23 /* Build configuration list for PBXProject "PTBPerformanceCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DBFD2C920C3CD7D001B7F23 /* Debug */,
+				2DBFD2CA20C3CD7D001B7F23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DBFD2CB20C3CD7D001B7F23 /* Build configuration list for PBXNativeTarget "PTBPerformanceCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DBFD2CC20C3CD7D001B7F23 /* Debug */,
+				2DBFD2CD20C3CD7D001B7F23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DBFD2CE20C3CD7D001B7F23 /* Build configuration list for PBXNativeTarget "PTBPerformanceCenterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DBFD2CF20C3CD7D001B7F23 /* Debug */,
+				2DBFD2D020C3CD7D001B7F23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DBFD2D120C3CD7D001B7F23 /* Build configuration list for PBXNativeTarget "PTBPerformanceCenterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DBFD2D220C3CD7D001B7F23 /* Debug */,
+				2DBFD2D320C3CD7D001B7F23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2DBFD29720C3CD7C001B7F23 /* Project object */;
+}
