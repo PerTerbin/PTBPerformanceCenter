@@ -1,9 +1,11 @@
-#前言
+# 前言
+
 众所周知，如今的用户变得越来越关心app的体验，开发者必须关注应用性能所带来的用户流失问题。目前危害较大的性能问题主要有：闪退、卡顿、发热、耗电快、网络劫持等，但是做过iOS开发的人都知道，在开发过程中我们没有一个很直观的工具可以实时的知道开发者写出来的代码会不会造成性能问题，虽然Xcode里提供了耗电量检测、内存泄漏检测等工具，但是这些工具使用效果并不理想（如Leak无法发现循环引用造成的内存泄漏）。所以这篇文章主要是介绍一款实时监控app各项性能指标的工具，包括**CPU占用率、内存使用量、内存泄漏、FPS、卡顿检测**，并且会分析造成这些性能问题的原因。
 
 ![](https://upload-images.jianshu.io/upload_images/6691810-8f00fe25c492fcfc.gif?imageMogr2/auto-orient/strip)
 
-#CPU
+# CPU
+
 CPU 是移动设备最重要的组成部分，如果开发者写的代码有问题导致CPU负载过高，会导致app使用过程中发生卡顿，同时也可能导致手机发热发烫，耗电过快，严重影响用户体验。
 如果想避免CPU负载过高可以通过检测app的CPU使用率，然后可以发现导致CPU过高的代码，并根据具体情况优化。那该如何检测CPU使用率呢？大学期间学过计算机的应该都上过操作系统这门课，学过的都知道线程CPU是调度和分配的基本单位，而应用作为进程运行时，包含了多个不同的线程，这样如果我们能知道app里所有线程占用 CPU 的情况，也就能知道整个app的 CPU 占用率。幸运的是我们在**Mach** 层中 *thread_basic_info* 结构体发现了我们想要的东西，*thread_basic_info* 结构体定义如下：
 ```
@@ -99,9 +101,11 @@ kern_return_t task_threads
 }
 ```
 
-#Memory
+# Memory
+
 物理内存（RAM）与 CPU 一样都是系统中最稀少的资源，也是最有可能产生竞争的资源，应用内存与性能直接相关 - 通常是以牺牲别的应用为代价。 不像 PC 端，iOS 没有交换空间作为备选资源，这就使得内存资源尤为重要。
-##App占用的内存
+## App占用的内存
+
 获取app内存的API同样可以在**Mach**层找到，*mach_task_basic_info* 结构体存储了 Mach task 的内存使用信息，其中 *resident_size* 就是应用使用的物理内存大小，*virtual_size* 是虚拟内存大小。
 ```
 #define MACH_TASK_BASIC_INFO     20         /* always 64-bit basic info */
@@ -133,7 +137,8 @@ struct mach_task_basic_info {
     return value;
 }
 ```
-##设备已使用的内存
+## 设备已使用的内存
+
 ```
 + (CGFloat)deviceUsedMemory {
     size_t length = 0;
@@ -178,7 +183,8 @@ struct mach_task_basic_info {
     return (CGFloat)(vm_page_size * (vmStats.free_count + vmStats.inactive_count)  / 1024.0 / 1024.0);
 }
 ```
-#FPS
+# FPS
+
 FPS即屏幕每秒的刷新率，范围在0-60之间，60最佳。FPS是测量用于保存、显示动态视频的信息数量，每秒钟帧数愈多，所显示的动作就会愈流畅，优秀的app都要保证FPS 在 55-60 之间，这样才会给用户流畅的感觉，反之，用户则会感觉到卡顿。
 对于FPS的计算网上争议颇多，这边使用的和 *YYKit* 中的 *YYFPSLabel* 原理一样，系统提供了 *CADisplayLink* 这个 API，该API在屏幕每次绘制的时候都会回调，通过接收 *CADisplayLink* 的回调，计算每秒钟收到的回调次数得到屏幕每秒的刷新次数，从而得到 FPS，具体代码如下：
 ```
@@ -217,8 +223,10 @@ FPS即屏幕每秒的刷新率，范围在0-60之间，60最佳。FPS是测量�
 ```
 值得注意的是基于 *CADisplayLink* 实现的 FPS 在生产场景中只有指导意义，不能代表真实的 FPS，因为基于 *CADisplayLink* 实现的 FPS 无法完全检测出当前 Core Animation 的性能情况，它只能检测出当前 RunLoop 的帧率。
 
-#Freezing
-##为什么会出现卡顿
+# Freezing
+
+## 为什么会出现卡顿
+
 从一个像素到最后真正显示在屏幕上，iPhone 究竟在这个过程中做了些什么？想要了解背后的运作流程，首先需要了解屏幕显示的原理。iOS 上完成图形的显示实际上是 CPU、GPU 和显示器协同工作的结果，具体来说，CPU 负责计算显示内容，包括视图的创建、布局计算、图片解码、文本绘制等，CPU 完成计算后会将计算内容提交给 GPU，GPU 进行变换、合成、渲染后将渲染结果提交到帧缓冲区，当下一次垂直同步信号（简称 V-Sync）到来时，最后显示到屏幕上。下面是显示流程的示意图：
 
 ![显示流程示意图](https://upload-images.jianshu.io/upload_images/6691810-896ca635826bd1a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -279,9 +287,11 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActi
 ```
 当检测到卡顿后可以进一步收集卡顿现场，如堆栈信息等，关于收集堆栈信息这里就不细说，很多第三方库都有实现，我之前是使用了项目中已经集成的收集崩溃信息的三方库，通过这个库在收集堆栈信息。
 
-#MemoryLeak
+# MemoryLeak 
+
 内存泄漏也是造成app内存过高的主要原因，如果iPhone手机的性能都很强，如果一个app会因为内存过高被系统强制杀掉，大部分都是存在内存泄漏。内存泄漏对于开发和测试而言表现得并不明显，如果它不泄漏到一定程度是用户是无法察觉的，但是这也是开发者必须杜绝的一大问题。
-##查找内存泄漏
+## 查找内存泄漏
+
 对于内存泄漏Xcode提供了Leak工具，但是使用过的人都知道Leak无法查出很多泄漏（如循环引用），在这里检测内存泄漏使用的是微信读书团队 Mr.佘 提供的工具 [MLeakFinder](https://github.com/Tencent/MLeaksFinder)。
 这里大致讲一下实现原理，当一个VC（或者View）被pop或者被dismiss 2 秒后还没有被销毁则认定该VC（或View）发生了泄漏。那如何知道 2 秒后该对象有没有被释放呢，
 ```
@@ -306,6 +316,7 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActi
 ```
 通过弱引用持有自身，并在 2 秒后调用 *assertNotDealloc*, 如果 2 秒内该对象已释放这里的 *weakSelf* 为nil，也就什么都不会发生，反之则认为发生了内存泄漏，进行下一步操作，如弹出警告等。
 这里只是大致讲一下 *MLeakFinder* 的原理，详细介绍可以去 [他的博客 ](http://wereadteam.github.io/2016/07/20/MLeaksFinder2/)详细了解。
-##查找循环引用
+## 查找循环引用
+
 查找循环引用使用的是 Facebook 开源库 *FBRetainCycleDetector* ,具体也可以去网上查找相关资料，这里就不详细说。
 
