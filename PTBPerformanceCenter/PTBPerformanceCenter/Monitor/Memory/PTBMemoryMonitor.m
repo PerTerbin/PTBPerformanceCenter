@@ -46,17 +46,15 @@
 }
 
 - (CGFloat)usedMemory {
-    task_basic_info_data_t taskInfo;
-    mach_msg_type_number_t infoCount = TASK_BASIC_INFO_COUNT;
-    kern_return_t kernReturn = task_info(mach_task_self(), TASK_BASIC_INFO, (task_info_t)&taskInfo, &infoCount);
-    
+    task_vm_info_data_t vmInfo;
+    mach_msg_type_number_t count = TASK_VM_INFO_COUNT;
+    kern_return_t kernReturn = task_info(mach_task_self(), TASK_VM_INFO, (task_info_t)&vmInfo,&count);
+
     if (kernReturn != KERN_SUCCESS) {
         return NSNotFound;
     }
     
-    CGFloat value = (CGFloat)(taskInfo.resident_size / 1024.0 / 1024.0);
-    
-    return value;
+    return (CGFloat)(vmInfo.phys_footprint / 1024.0 / 1024.0);
 }
 
 + (CGFloat)deviceUsedMemory {
